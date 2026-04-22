@@ -187,7 +187,7 @@ https://github.com/본인아이디/linux-study
 
 ### 4-1. 레포 접속
 
-👉 `https://github.com/본인아이디/linux-study`
+👉 `https://github.com/hoyoung94/linux-study`
 
 ### 4-2. 새 파일 만들기
 
