@@ -161,7 +161,7 @@ Merge (main에 반영)
 **① 가입한 이메일 메일함 확인**
 
 - 발신: `noreply@github.com`
-- 제목: `You've been invited to collaborate on 본인아이디/linux-study`
+- 제목: `You've been invited to collaborate on hoyoung94/linux-study`
 - 스팸함도 꼭 확인!
 
 **② 메일 안의 `View invitation` 버튼 클릭**
@@ -172,7 +172,7 @@ Merge (main에 반영)
 
 아래 URL 접속했을 때 레포가 보이면 성공! ✅
 ```
-https://github.com/본인아이디/linux-study
+https://github.com/hoyoung94/linux-study
 ```
 
 > ⚠️ 메일을 못 받았다면?
