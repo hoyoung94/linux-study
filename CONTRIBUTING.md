@@ -2,7 +2,8 @@
 
 > 이 문서는 스터디 레포에 처음 참여하는 팀원을 위한 단계별 안내서입니다.
 > **Git을 처음 써보는 분도 이 문서만 따라오면 첫 기여까지 완료할 수 있어요!**
-> 먼저 [week0/README.md](week0/README.md)를 읽고 이번 주차 과제 구조를 확인한 뒤 진행하세요.
+> 먼저 [week0/README.md](week0/README.md)를 읽고 이번 주차 구조를 확인하세요.
+> Git 첫 제출은 [week0/session1.md](week0/session1.md)부터 시작하는 것을 권장합니다.
 
 ---
 
@@ -184,153 +185,29 @@ https://github.com/hoyoung94/linux-study
 ## 4. 첫 기여 실습
 
 > **핵심 파트예요!** 천천히 따라오세요.
-> 문서 작성은 **VSCode**, Git 명령은 **터미널**, 최종 제출은 **GitHub PR**로 진행합니다.
+> Git 관련 상세 실습은 [week0/session1.md](week0/session1.md), [week0/session2.md](week0/session2.md)를 먼저 따라오세요.
+> 이 문서에서는 공통 흐름만 짧게 정리합니다.
 
-### 4-1. 로컬에 레포 준비
+### 4-1. 시작 순서
 
-처음 하는 사람은 작업할 폴더에서 아래 명령어를 입력하세요.
+1. [week0/README.md](week0/README.md)로 전체 일정을 확인합니다.
+2. 첫 Git 제출은 [week0/session1.md](week0/session1.md)부터 진행합니다.
+3. 그 다음 [week0/session2.md](week0/session2.md)로 브랜치와 PR 흐름을 이어갑니다.
 
-```bash
-cd C:\Users\HP\Documents\프로젝트\진행중
-git clone https://github.com/hoyoung94/linux-study.git
-cd linux-study
-```
+### 4-2. 공통 흐름
 
-이미 `linux-study`를 clone한 상태라면 VSCode에서 그 폴더를 열고, `터미널 -> 새 터미널`만 열면 됩니다.
+1. 각자 clone한 `linux-study` 폴더를 VSCode로 엽니다.
+2. 터미널에서 브랜치를 만듭니다.
+3. `members/<아이디>/...md` 파일을 작성합니다.
+4. `git add -> git commit -> git push`를 실행합니다.
+5. GitHub에서 PR을 생성합니다.
 
-### 4-2. `main` 최신화
+### 4-3. 꼭 기억할 규칙
 
-```bash
-git switch main
-git pull origin main
-```
-
-### 4-3. 작업 브랜치 만들기
-
-아래 명령어로 이번 과제용 브랜치를 만듭니다.
-
-```bash
-git switch -c study/본인아이디-session1
-```
-
-예:
-
-```bash
-git switch -c study/kimjihoon-session1
-```
-
-> `git switch`가 안 되면 `git checkout -b study/본인아이디-session1`으로 실행해도 됩니다.
-
-### 4-4. 새 파일 만들기
-
-VSCode 탐색기에서 아래 경로로 파일을 만듭니다.
-
-```
-members/본인GitHub아이디/2026-04-24-git-session1.md
-```
-
-예:
-
-- GitHub 아이디가 `kimjihoon`이면 `members/kimjihoon/2026-04-24-git-session1.md`
-
-아래 템플릿을 그대로 붙여넣고 저장합니다.
-
-```markdown
-# Git 기초 학습 Session 1 (2026-04-24)
-
-## 오늘 배운 개념
-- 
-
-## 오늘 실습한 명령어
-- `git status`
-- `git add`
-- `git commit`
-- `git push`
-
-## 직접 해본 것
-- 
-
-## 헷갈렸던 점
-- 
-
-## 다음 학습 예정
-- 
-```
-
-### 4-5. 상태 확인 + add
-
-터미널에서 아래 명령어를 입력합니다.
-
-```bash
-git status
-git add members/본인GitHub아이디/2026-04-24-git-session1.md
-git status
-```
-
-첫 번째 `git status`에서는 새 파일이 보이고, `git add` 뒤에는 커밋할 파일로 올라간 상태가 보이면 정상입니다.
-
-### 4-6. commit 만들기
-
-```bash
-git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
-```
-
-### 4-7. GitHub로 push
-
-```bash
-git push -u origin study/본인아이디-session1
-```
-
-예:
-
-```bash
-git push -u origin study/kimjihoon-session1
-```
-
-> push 과정에서 로그인 창이 뜨면 GitHub 비밀번호 대신 PAT를 입력합니다.
-
-### 4-8. Pull Request 생성
-
-1. GitHub에서 `https://github.com/hoyoung94/linux-study`를 엽니다.
-2. `Compare & pull request` 버튼이 보이면 클릭합니다.
-3. 버튼이 안 보이면 `Pull requests -> New pull request`로 들어갑니다.
-4. 제목을 아래처럼 적습니다.
-
-```
-docs: [git-session1] Git 기초와 첫 업로드
-```
-
-5. 본문은 아래 예시를 참고해서 적습니다.
-
-```markdown
-## 변경 내용
-- `members/본인아이디/2026-04-24-git-session1.md` 추가
-- Session 1 Git 기초 실습 기록 정리
-
-## 체크리스트
-- [x] 로컬에서 `git add`, `git commit`, `git push`를 실행함
-- [x] 브랜치 규칙을 지킴
-```
-
-6. `Create pull request`를 누릅니다.
-
-### 4-9. Merge
-
-PR 승인 후에는 아래 순서로 머지합니다.
-
-1. `Merge pull request` 클릭
-2. `Confirm merge` 클릭
-
-### 4-10. 브랜치 삭제
-
-머지 후에는 GitHub에서 `Delete branch`를 눌러 정리합니다.
-
-### 4-11. 완료 확인 ✅
-
-아래 URL에서 본인 폴더가 보이면 성공! 🎉
-```
-https://github.com/hoyoung94/linux-study/tree/main/members/본인아이디
-```
+- `main`에서 직접 작업하지 않습니다.
+- 브랜치는 `study/<아이디>-sessionN` 규칙을 사용합니다.
+- 파일은 `members/<아이디>/` 아래에 올립니다.
+- 자세한 명령어와 제출 예시는 `week0/session1.md`와 `week0/session2.md`를 기준으로 봅니다.
 
 ---
 
