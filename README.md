@@ -16,10 +16,10 @@
 | --- | --- | --- |
 | 양호영 | [@hoyoung94](https://github.com/hoyoung94) | hoyoung940816@gmail.com |
 | 유지인 | [@yujiin12700-collab](https://github.com/yujiin12700-collab) | yujiin12700@gmail.com |
-| 이하은 | [@Halee0090](https://github.com/Halee0090) | 미확인 |
+| 이하은 | [@Halee0090](https://github.com/Halee0090) | gkdmsgkdms22@gmail.com |
 | 임지혜 | [@jyeyim](https://github.com/jyeyim) | todolajh@gmail.com |
 
-> 이메일은 저장소 커밋 기록 또는 공개 프로필 기준으로 반영했습니다. 이하은 님은 확인 가능한 이메일 정보가 없어 `미확인`으로 표기했습니다.
+> 이메일은 저장소 커밋 기록 또는 팀원 확인 기준으로 반영했습니다.
 
 ## 📂 폴더 구조
 
