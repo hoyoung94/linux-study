@@ -1,11 +1,45 @@
 # Session 1: Git 기초와 첫 업로드
 
 > 이번 세션의 목표는 내 컴퓨터에서 `git add`, `git commit`, `git push`를 직접 해보고, 그 과정을 문서로 정리해 GitHub PR까지 올려보는 것입니다.
-> 오늘 할 일은 1. VSCode에서 문서 작성 2. 터미널에서 Git 명령 실행 3. GitHub에서 PR 생성 입니다.
+> 오늘 할 일은 1. `linux-study` 폴더 준비 2. VSCode에서 문서 작성 3. 터미널에서 Git 명령 실행 4. GitHub에서 PR 생성 입니다.
+
+## 0. 시작 전에 확인
+
+이 문서에서 말하는 `linux-study` 폴더는 **각자 자기 컴퓨터에 clone해 둔 저장소 폴더**를 뜻합니다.
+
+- 바탕화면에 새 빈 폴더를 임의로 만들라는 뜻이 아닙니다.
+- 경로는 사람마다 다를 수 있습니다.
+- 중요한 것은 `git clone`으로 내려받은 `linux-study` 폴더를 여는 것입니다.
+
+이미 `linux-study`를 clone했다면:
+
+- 그 폴더를 VSCode에서 엽니다.
+
+아직 `linux-study`가 없다면:
+
+1. 원하는 작업 폴더를 정합니다.
+예: 바탕화면, 문서, 프로젝트 폴더
+2. 그 위치에서 아래 명령어를 실행합니다.
+
+```bash
+git clone https://github.com/hoyoung94/linux-study.git
+```
+
+3. 그러면 `linux-study` 폴더가 새로 생깁니다.
+4. 그 생성된 `linux-study` 폴더를 VSCode에서 엽니다.
+
+VSCode에서 여는 방법:
+
+1. VSCode 실행
+2. `파일 -> 폴더 열기`
+3. 방금 clone한 `linux-study` 폴더 선택
+4. 열기
+
+> 핵심은 `새 폴더를 직접 만드는 것`이 아니라 `clone으로 생성된 linux-study 폴더를 여는 것`입니다.
 
 ## 1. 이번 세션에서 할 일
 
-1. `linux-study` 폴더를 VSCode로 엽니다.
+1. 내 컴퓨터에 clone된 `linux-study` 폴더를 VSCode로 엽니다.
 2. 제출 문서 `2026-04-24-git-session1.md`를 만듭니다.
 3. 터미널에서 `git add`, `git commit`, `git push`를 직접 실행합니다.
 4. GitHub에서 PR을 생성합니다.
@@ -41,6 +75,9 @@ docs: [git-session1] Git 기초와 첫 업로드
 ## 3. 어디에서 문서를 작성하나요?
 
 문서는 **VSCode에서 작성**합니다.
+
+여기서 말하는 `linux-study` 폴더는 각자 자기 컴퓨터에 clone해 둔 폴더입니다.  
+절대경로는 사람마다 다르므로 문서에서는 고정 경로를 쓰지 않습니다.
 
 순서:
 
@@ -89,7 +126,13 @@ Changes to be committed:
 
 이미 `linux-study`를 clone 했다면 그 폴더를 VSCode로 열고, 상단 메뉴에서 `터미널 -> 새 터미널`을 누릅니다.
 
-아직 clone하지 않았다면 [CONTRIBUTING.md](../CONTRIBUTING.md)의 4-1부터 먼저 따라오면 됩니다.
+아직 clone하지 않았다면 원하는 작업 폴더에서 아래 명령어를 실행합니다.
+
+```bash
+git clone https://github.com/hoyoung94/linux-study.git
+```
+
+그 다음 생성된 `linux-study` 폴더를 VSCode로 열면 됩니다.
 
 ### 5-2. 작업 브랜치 만들기
 
