@@ -1,9 +1,8 @@
 # Session 2: 브랜치와 PR 실습
 
 > 이번 세션의 목표는 `main`을 최신화하고, 새 브랜치를 만든 뒤, 로컬에서 커밋과 push를 해서 PR까지 올려보는 것입니다.
-> 오늘 할 일은 1. `linux-study` 폴더 다시 열기 2. VSCode에서 문서 작성 3. 터미널에서 브랜치와 push 실습 4. GitHub에서 PR 생성 입니다.
 
-## 0. 시작 전에 확인
+## 0. 시작 전
 
 이 문서는 **Session 1을 끝낸 뒤 이어서 진행하는 문서**입니다.
 
@@ -18,22 +17,14 @@
 2. 그 폴더를 VSCode에서 다시 열었는지
 3. Git Bash 또는 VSCode 터미널을 열 수 있는지
 
-만약 아직 `linux-study`가 없거나 Session 1을 하지 않았다면:
+아직 `linux-study`가 없거나 Session 1을 하지 않았다면:
 
 - 먼저 [session1.md](./session1.md)를 보고 `git clone`부터 진행합니다.
 - Session 2는 Session 1이 끝난 뒤 시작하는 것이 맞습니다.
 
-## 1. 이번 세션에서 할 일
+## 1. 제출 규격
 
-1. Session 1에서 사용한 `linux-study` 폴더를 VSCode로 다시 엽니다.
-2. `main`을 최신 상태로 맞춥니다.
-3. 새 브랜치 `study/<아이디>-session2`를 만듭니다.
-4. 문서를 작성하고 `git add`, `git commit`, `git push`를 실행합니다.
-5. GitHub에서 PR을 생성합니다.
-
-## 2. 무엇을 제출하나요?
-
-제출물은 아래 3개입니다.
+이번 세션 제출물은 아래 3개입니다.
 
 - Markdown 파일 1개
 - 브랜치 1개
@@ -57,31 +48,30 @@ PR 제목:
 docs: [git-session2] 브랜치와 PR 실습
 ```
 
-## 3. 어디에서 문서를 작성하나요?
+## 2. 전체 흐름
 
-문서는 **VSCode에서 작성**합니다.
+이번 실습은 아래 순서로 진행합니다.
 
-여기서 말하는 `linux-study` 폴더는 Session 1 때 사용했던 저장소 폴더입니다.  
-절대경로는 사람마다 다르므로 문서에서는 고정 경로를 쓰지 않습니다.
+1. `linux-study` 폴더를 연다.
+2. `main`을 최신화한다.
+3. 새 브랜치를 만든다.
+4. 제출 문서를 만든다.
+5. `git status`로 상태를 확인한다.
+6. `git add`로 파일을 스테이징한다.
+7. `git commit`으로 기록을 남긴다.
+8. `git push`로 GitHub에 올린다.
+9. GitHub에서 PR을 만든다.
 
-순서:
+## 3. 제출 문서에는 무엇을 적나요?
 
-1. VSCode에서 `linux-study` 폴더를 엽니다.
-2. `members/<본인GitHub아이디>/` 폴더 안에 `2026-04-26-git-session2.md` 파일을 만듭니다.
-3. 아래 템플릿을 붙여넣고 내용을 채운 뒤 저장합니다.
-
-`.md` 파일은 메모장처럼 글을 적는 텍스트 문서라고 생각하면 됩니다.
-
-## 4. 명령어 친 내용은 어떻게 적나요?
-
-터미널 화면 전체를 제출하는 것이 아닙니다.  
-문서에 아래 3가지만 적으면 됩니다.
+터미널 화면 전체를 그대로 붙일 필요는 없습니다.  
+아래 3가지만 정리하면 충분합니다.
 
 - 내가 입력한 명령어
 - 화면에 나온 핵심 결과
 - 내가 이해한 한 줄
 
-예를 들면 아래처럼 적으면 됩니다.
+예:
 
 ````md
 ## 오늘 실습한 명령어
@@ -104,24 +94,29 @@ Already up to date.
 - `git pull origin main`은 최신 main 내용을 내 컴퓨터로 가져오는 명령어다.
 ````
 
-## 5. 실습 순서
+헷갈리면 뜻을 길게 쓰려고 하지 말고, **명령어 + 결과 한 줄 + 내 말 한 줄**만 적어도 됩니다.
 
-### 5-1. `linux-study` 폴더 다시 열기
+## 4. 실습 순서
+
+### 4-1. `linux-study` 폴더 열기
 
 Session 1 때 사용했던 같은 `linux-study` 폴더를 VSCode에서 다시 엽니다.
 
 아직 이 폴더가 없다면 Session 2를 바로 시작하지 말고, 먼저 [session1.md](./session1.md)를 따라 `git clone`부터 진행합니다.
 
-그 다음 VSCode 상단 메뉴에서 `터미널 -> 새 터미널`을 누릅니다.
+그다음 VSCode 상단 메뉴에서 `터미널 -> 새 터미널`을 누릅니다.
 
-### 5-2. `main` 최신화
+### 4-2. `main` 최신화
 
-터미널에서 아래 명령어를 순서대로 입력합니다.
+터미널에서 아래 명령어를 순서대로 실행합니다.
 
 ```bash
 git switch main
 git pull origin main
 ```
+
+> `git switch main`은 현재 작업 브랜치를 main으로 이동합니다.  
+> `git pull origin main`은 GitHub의 최신 main 내용을 내 컴퓨터로 가져옵니다.
 
 문서에는 아래를 적습니다.
 
@@ -129,13 +124,15 @@ git pull origin main
 - `pull` 결과가 어땠는지
 - `git pull`이 무엇을 하는지 한 줄 설명
 
-### 5-3. 새 브랜치 만들기
+### 4-3. 새 브랜치 만들기
 
-이제 이번 과제용 브랜치를 만듭니다.
+터미널에서 아래 명령어를 실행합니다.
 
 ```bash
 git switch -c study/<아이디>-session2
 ```
+
+> `git switch -c`는 새 브랜치를 만들면서 동시에 그 브랜치로 이동합니다. `-c`는 create(생성)의 줄임말입니다.
 
 예:
 
@@ -143,59 +140,81 @@ git switch -c study/<아이디>-session2
 git switch -c study/hoyoung94-session2
 ```
 
-> `git switch`가 안 되면 `git checkout -b study/<아이디>-session2`로 실행해도 됩니다.
+`git switch`가 안 되면 아래 명령어를 사용해도 됩니다.
+
+```bash
+git checkout -b study/<아이디>-session2
+```
+
+확인할 것:
+- 현재 브랜치가 `study/<아이디>-session2`로 바뀌었는지
 
 문서에는 아래를 적습니다.
 
 - 어떤 브랜치를 만들었는지
-- 왜 `main`이 아니라 새 브랜치에서 작업하는지
+- 왜 `main`이 아니라 새 브랜치에서 작업하는지 한 줄 설명
 
-### 5-4. 제출 문서 만들기
+### 4-4. 제출 문서 만들기
 
-아래 경로로 파일을 만들고 저장합니다.
+VSCode에서 아래 경로로 파일을 만듭니다.
 
 ```text
 members/<본인GitHub아이디>/2026-04-26-git-session2.md
 ```
 
-### 5-5. 상태 확인
+`members/<본인GitHub아이디>/` 폴더가 없으면 먼저 만들고, 그 안에 파일을 생성합니다.
+
+파일을 만든 뒤 Section 5의 예시를 참고해 내용을 채우고 저장합니다.
+
+### 4-5. 상태 확인
 
 ```bash
 git status
 ```
 
+> `git status`는 현재 어떤 파일이 변경되었는지, 스테이징 상태는 어떤지 한눈에 보여줍니다.
+
 문서에는 아래를 적습니다.
 
 - 새 파일이 보였는지
 - 현재 브랜치가 무엇인지
+- `git status`가 현재 변경 상태를 확인하는 명령어라는 점
 
-### 5-6. `git add` 해보기
+### 4-6. `git add` 해보기
 
 ```bash
 git add members/<본인GitHub아이디>/2026-04-26-git-session2.md
 ```
 
+> `git add`는 커밋에 포함할 파일을 선택해 스테이징 영역에 올립니다. 아직 저장된 것은 아니고 "커밋 준비 완료" 상태로 만드는 단계입니다.
+
 문서에는 아래를 적습니다.
 
-- 입력한 명령어
-- `git add` 뒤에 상태가 어떻게 바뀌었는지
+- 입력한 `git add` 명령어
+- `git add` 전후에 `git status` 결과가 어떻게 달라졌는지
+- `git add`가 무엇을 하는지 한 줄 설명
 
-### 5-7. `git commit` 해보기
+### 4-7. `git commit` 해보기
 
 ```bash
 git commit -m "docs: [git-session2] 브랜치와 PR 실습"
 ```
 
+> `git commit`은 스테이징된 파일을 하나의 기록(스냅샷)으로 저장합니다. `-m` 뒤의 따옴표 안이 커밋 메시지입니다.
+
 문서에는 아래를 적습니다.
 
-- 입력한 명령어
+- 입력한 `git commit` 명령어
 - 화면에 나온 커밋 결과 한 줄
+- `git commit`이 무엇을 하는지 한 줄 설명
 
-### 5-8. `git push` 해보기
+### 4-8. `git push` 해보기
 
 ```bash
 git push -u origin study/<아이디>-session2
 ```
+
+> `git push`는 내 컴퓨터의 커밋을 GitHub에 올립니다. `-u origin`은 이 브랜치를 GitHub 원격 저장소와 연결한다는 뜻으로, 처음 push할 때 한 번만 씁니다.
 
 예:
 
@@ -205,30 +224,33 @@ git push -u origin study/hoyoung94-session2
 
 문서에는 아래를 적습니다.
 
-- 입력한 명령어
-- 화면에 나온 핵심 결과
-- 로컬 브랜치와 GitHub 브랜치가 연결됐는지
+- 입력한 `git push` 명령어
+- 화면에 나온 핵심 결과 한 줄
+- `git push`가 무엇을 하는지 한 줄 설명
 
-### 5-9. GitHub에서 PR 만들기
+> 처음 push할 때 로그인이나 토큰 입력이 필요할 수 있습니다. GitHub 비밀번호 대신 PAT를 사용할 수 있습니다.
+
+### 4-9. GitHub에서 PR 만들기
 
 1. GitHub에서 `linux-study` 저장소를 엽니다.
-2. `Compare & pull request`를 누릅니다.
-3. PR 제목을 아래처럼 적습니다.
+2. `Compare & pull request` 버튼이 보이면 클릭합니다.
+3. 보이지 않으면 `Pull requests -> New pull request`로 들어갑니다.
+4. PR 제목을 아래처럼 적습니다.
 
 ```text
 docs: [git-session2] 브랜치와 PR 실습
 ```
 
-4. PR을 생성합니다.
+5. PR을 생성합니다.
 
 문서에는 아래를 적습니다.
 
-- 브랜치가 왜 필요한지
-- PR이 어떤 역할을 하는지
+- 브랜치가 왜 필요한지 한 줄 설명
+- PR이 어떤 역할을 하는지 한 줄 설명
 
-## 6. 제출 문서 템플릿
+## 5. 제출 문서 예시
 
-아래 템플릿을 그대로 복붙해서 작성하면 됩니다.
+아래는 완성된 제출 문서의 예시입니다. 내 문서와 비교해 빠진 항목이 없는지 확인하세요.
 
 ````md
 # Git 기초 학습 Session 2 (2026-04-26)
@@ -270,30 +292,22 @@ branch 'study/hoyoung94-session2' set up to track 'origin/study/hoyoung94-sessio
 ## 헷갈렸던 점
 - `main`에서 바로 작업하면 안 되는 이유를 더 익히고 싶다.
 
-## 이제 혼자 할 수 있는 것
-- `git pull`로 최신 내용을 받아올 수 있다.
-- 새 브랜치를 만들 수 있다.
-- 커밋한 내용을 GitHub에 push할 수 있다.
-- PR이 어떤 역할을 하는지 설명할 수 있다.
+## 다음 학습 예정
+- 다음 세션에서 충돌 해결과 merge 흐름을 더 익힐 예정이다.
 ````
 
-## 7. 제출 방법
+## 6. 완료 체크리스트
 
-1. VSCode에서 문서를 작성하고 저장합니다.
-2. 터미널에서 `git switch main -> git pull -> git switch -c -> git add -> git commit -> git push` 순서로 진행합니다.
-3. GitHub에서 PR을 생성합니다.
-4. 화면이 헷갈리면 [CONTRIBUTING.md](../CONTRIBUTING.md)를 같이 봅니다.
+아래 항목을 모두 만족하면 완료입니다.
 
-## 8. 완료 기준
-
-- [ ] `members/<본인GitHub아이디>/2026-04-26-git-session2.md` 파일을 만들었다.
-- [ ] `git switch main`과 `git pull origin main`을 실행했다.
-- [ ] `git switch -c study/<아이디>-session2` 또는 `git checkout -b ...`를 실행했다.
-- [ ] `git status`를 실행했다.
-- [ ] `git add`를 실행했다.
-- [ ] `git commit`을 실행했다.
-- [ ] `git push`를 실행했다.
-- [ ] 브랜치와 PR의 역할을 문장으로 적었다.
-- [ ] 실습 내용을 `.md` 문서에 정리했다.
-- [ ] `study/<아이디>-session2` 브랜치가 GitHub에 올라갔다.
-- [ ] PR을 생성했다.
+- `members/<본인GitHub아이디>/2026-04-26-git-session2.md` 파일을 만들었다.
+- `git switch main`과 `git pull origin main`을 실행했다.
+- `study/<아이디>-session2` 브랜치를 만들었다.
+- `git status`를 실행했다.
+- `git add`를 실행했다.
+- `git commit`을 실행했다.
+- `git push`를 실행했다.
+- 브랜치와 PR의 역할을 문장으로 적었다.
+- 실습 내용을 `.md` 문서에 정리했다.
+- GitHub에 브랜치를 올렸다.
+- PR을 생성했다.
