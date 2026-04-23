@@ -6,7 +6,9 @@
 ```
 members/
 ├── 팀원1아이디/
-│   └── 2026-04-23-linux-basics.md
+│   ├── 2026-04-24-git-session1.md
+│   └── 2026-04-26-git-session2.md
 └── 팀원2아이디/
-    └── 2026-04-23-linux-basics.md
+    ├── 2026-04-24-git-session1.md
+    └── 2026-04-26-git-session2.md
 ```

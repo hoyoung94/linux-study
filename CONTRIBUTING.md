@@ -2,6 +2,7 @@
 
 > 이 문서는 스터디 레포에 처음 참여하는 팀원을 위한 단계별 안내서입니다.
 > **Git을 처음 써보는 분도 이 문서만 따라오면 첫 기여까지 완료할 수 있어요!**
+> 먼저 [week0/README.md](week0/README.md)를 읽고 이번 주차 과제 구조를 확인한 뒤 진행하세요.
 
 ---
 
@@ -124,7 +125,7 @@ git config --global user.email
 ```
 main ─────────────────────────────▶ (팀 공용 공간, 보호됨 🔒)
          │
-         └─── study/내아이디-day1 ──▶ (내 작업 공간 ✅)
+         └─── study/내아이디-session1 ──▶ (내 작업 공간 ✅)
 ```
 
 ### PR(Pull Request)란?
@@ -144,7 +145,7 @@ Merge (main에 반영)
 ### 우리 팀 협업 흐름
 
 ```
-1. 새 브랜치 생성 (study/내아이디-dayN)
+1. 새 브랜치 생성 (study/내아이디-sessionN)
 2. 브랜치에서 파일 작성
 3. 커밋 (저장)
 4. PR 생성
@@ -183,101 +184,152 @@ https://github.com/hoyoung94/linux-study
 ## 4. 첫 기여 실습
 
 > **핵심 파트예요!** 천천히 따라오세요.
-> 모든 작업은 **GitHub 웹사이트에서** 진행합니다. 터미널 안 써도 돼요!
+> 문서 작성은 **VSCode**, Git 명령은 **터미널**, 최종 제출은 **GitHub PR**로 진행합니다.
 
-### 4-1. 레포 접속
+### 4-1. 로컬에 레포 준비
 
-👉 `https://github.com/hoyoung94/linux-study`
+처음 하는 사람은 작업할 폴더에서 아래 명령어를 입력하세요.
 
-### 4-2. 새 파일 만들기
-
-**① 상단 `Add file` → `Create new file` 클릭**
-
-**② 파일 경로 입력**
-
-```
-members/본인GitHub아이디/2026-04-23-linux-basics.md
+```bash
+cd C:\Users\HP\Documents\프로젝트\진행중
+git clone https://github.com/hoyoung94/linux-study.git
+cd linux-study
 ```
 
-예시:
-- GitHub 아이디가 `kimjihoon` → `members/kimjihoon/2026-04-23-linux-basics.md`
+이미 `linux-study`를 clone한 상태라면 VSCode에서 그 폴더를 열고, `터미널 -> 새 터미널`만 열면 됩니다.
 
-> 💡 `/` 를 입력하는 순간 폴더가 자동으로 만들어져요!
+### 4-2. `main` 최신화
 
-**③ 파일 내용 입력**
+```bash
+git switch main
+git pull origin main
+```
+
+### 4-3. 작업 브랜치 만들기
+
+아래 명령어로 이번 과제용 브랜치를 만듭니다.
+
+```bash
+git switch -c study/본인아이디-session1
+```
+
+예:
+
+```bash
+git switch -c study/kimjihoon-session1
+```
+
+> `git switch`가 안 되면 `git checkout -b study/본인아이디-session1`으로 실행해도 됩니다.
+
+### 4-4. 새 파일 만들기
+
+VSCode 탐색기에서 아래 경로로 파일을 만듭니다.
+
+```
+members/본인GitHub아이디/2026-04-24-git-session1.md
+```
+
+예:
+
+- GitHub 아이디가 `kimjihoon`이면 `members/kimjihoon/2026-04-24-git-session1.md`
+
+아래 템플릿을 그대로 붙여넣고 저장합니다.
 
 ```markdown
-# Linux 기초 학습 (2026-04-23)
+# Git 기초 학습 Session 1 (2026-04-24)
 
-## 오늘 배운 것
+## 오늘 배운 개념
 - 
 
-## 궁금한 점
+## 오늘 실습한 명령어
+- `git status`
+- `git add`
+- `git commit`
+- `git push`
+
+## 직접 해본 것
+- 
+
+## 헷갈렸던 점
 - 
 
 ## 다음 학습 예정
 - 
 ```
 
-### 4-3. 커밋 + 브랜치 생성
+### 4-5. 상태 확인 + add
 
-**① 우측 상단 `Commit changes...` 클릭**
+터미널에서 아래 명령어를 입력합니다.
 
-**② Commit message 입력:**
-```
-docs: 본인아이디 Day 1 linux 학습 기록 추가
-```
-
-**③ 아래 옵션 선택:**
-
-```
-🔒 Commit directly to the main branch  ← 잠겨있음 (정상이에요!)
-✅ Create a new branch for this commit and start a pull request  ← 이거 선택!
+```bash
+git status
+git add members/본인GitHub아이디/2026-04-24-git-session1.md
+git status
 ```
 
-**④ 브랜치 이름 입력:**
+첫 번째 `git status`에서는 새 파일이 보이고, `git add` 뒤에는 커밋할 파일로 올라간 상태가 보이면 정상입니다.
+
+### 4-6. commit 만들기
+
+```bash
+git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
 ```
-study/본인아이디-day1
+
+### 4-7. GitHub로 push
+
+```bash
+git push -u origin study/본인아이디-session1
 ```
 
-**⑤ `Propose changes` 클릭**
+예:
 
-### 4-4. Pull Request 생성
+```bash
+git push -u origin study/kimjihoon-session1
+```
 
-**① 제목 확인** (자동으로 채워져 있어요)
+> push 과정에서 로그인 창이 뜨면 GitHub 비밀번호 대신 PAT를 입력합니다.
 
-**② 본문 입력:**
+### 4-8. Pull Request 생성
+
+1. GitHub에서 `https://github.com/hoyoung94/linux-study`를 엽니다.
+2. `Compare & pull request` 버튼이 보이면 클릭합니다.
+3. 버튼이 안 보이면 `Pull requests -> New pull request`로 들어갑니다.
+4. 제목을 아래처럼 적습니다.
+
+```
+docs: [git-session1] Git 기초와 첫 업로드
+```
+
+5. 본문은 아래 예시를 참고해서 적습니다.
+
 ```markdown
-## 📌 변경 내용
-- `members/본인아이디/` 폴더 생성
-- Day 1 Linux 기초 학습 기록 추가
+## 변경 내용
+- `members/본인아이디/2026-04-24-git-session1.md` 추가
+- Session 1 Git 기초 실습 기록 정리
 
-## ✅ 체크리스트
-- [x] 폴더 구조 규칙을 따름
-- [x] 파일명 규칙(YYYY-MM-DD-주제.md)을 따름
+## 체크리스트
+- [x] 로컬에서 `git add`, `git commit`, `git push`를 실행함
+- [x] 브랜치 규칙을 지킴
 ```
 
-**③ `Create pull request` 클릭**
+6. `Create pull request`를 누릅니다.
 
-### 4-5. Merge
+### 4-9. Merge
 
-**① `Merge pull request` 버튼 옆 `▼` 클릭**
+PR 승인 후에는 아래 순서로 머지합니다.
 
-**② `Create a merge commit` 선택**
+1. `Merge pull request` 클릭
+2. `Confirm merge` 클릭
 
-**③ `Merge pull request` → `Confirm merge` 클릭**
+### 4-10. 브랜치 삭제
 
-### 4-6. 브랜치 삭제
+머지 후에는 GitHub에서 `Delete branch`를 눌러 정리합니다.
 
-**`Delete branch`** 버튼 클릭!
-
-> ⚠️ **"Merge = 브랜치 삭제"** 세트로 기억하세요!
-
-### 4-7. 완료 확인 ✅
+### 4-11. 완료 확인 ✅
 
 아래 URL에서 본인 폴더가 보이면 성공! 🎉
 ```
-https://github.com/본인아이디/linux-study/tree/main/members
+https://github.com/hoyoung94/linux-study/tree/main/members/본인아이디
 ```
 
 ---
@@ -290,7 +342,8 @@ https://github.com/본인아이디/linux-study/tree/main/members
 docs: [주제] 내용 요약
 
 예시:
-docs: kimjihoon Day 1 linux 학습 기록 추가
+docs: [git-session1] Git 기초와 첫 업로드
+docs: [git-session2] 브랜치와 PR 실습
 docs: [week1] 파일 시스템 정리
 study: [week2] 권한 관리 실습 기록
 ```
@@ -306,26 +359,27 @@ study: [week2] 권한 관리 실습 기록
 YYYY-MM-DD-주제.md
 
 예시:
-2026-04-23-linux-basics.md
-2026-04-24-file-permission.md
+2026-04-24-git-session1.md
+2026-04-26-git-session2.md
 2026-04-28-shell-script.md
 ```
 
 ### 브랜치 이름 규칙
 
 ```
-study/본인아이디-dayN
+study/본인아이디-sessionN
 
 예시:
-study/kimjihoon-day1
-study/kimjihoon-day2
+study/kimjihoon-session1
+study/kimjihoon-session2
 ```
 
 ### ⚠️ 자주 하는 실수
 
 | 실수 | 해결 방법 |
 | --- | --- |
-| "Commit directly to main"이 잠겨있어요 | 정상이에요! 아래 "Create a new branch" 선택 |
+| `git switch -c`가 안 돼요 | `git checkout -b 브랜치이름`으로 대신 실행 |
+| `git push`에서 인증이 막혀요 | GitHub 비밀번호 대신 PAT를 입력 |
 | 초대 메일을 못 받았어요 | 스팸함 확인 후 스터디장에게 재초대 요청 |
 | PAT 토큰을 복사 안 했어요 | Settings에서 새 토큰 다시 발급 |
 | 브랜치 삭제를 깜빡했어요 | 레포 → branches → 해당 브랜치 옆 🗑️ 클릭 |
