@@ -12,12 +12,14 @@
 
 ## 👥 팀원
 
-| 이름 | GitHub |
-| --- | --- |
-| 팀원1 | [@아이디](https://github.com/아이디) |
-| 팀원2 | [@아이디](https://github.com/아이디) |
-| 팀원3 | [@아이디](https://github.com/아이디) |
-| 팀원4 | [@아이디](https://github.com/아이디) |
+| 이름 | GitHub | 이메일 |
+| --- | --- | --- |
+| 양호영 | [@hoyoung94](https://github.com/hoyoung94) | hoyoung940816@gmail.com |
+| 유지인 | [@yujiin12700-collab](https://github.com/yujiin12700-collab) | yujiin12700@gmail.com |
+| 이하은 | [@Halee0090](https://github.com/Halee0090) | 미확인 |
+| 임지혜 | [@jyeyim](https://github.com/jyeyim) | todolajh@gmail.com |
+
+> 이메일은 저장소 커밋 기록 또는 공개 프로필 기준으로 반영했습니다. 이하은 님은 확인 가능한 이메일 정보가 없어 `미확인`으로 표기했습니다.
 
 ## 📂 폴더 구조
 
@@ -42,6 +44,6 @@ docs: [week1] 파일 시스템 정리
 study: [week2] 권한 관리 실습 기록
 ```
 
-## 📜 라이선스
+## 📝 라이선스
 
 [MIT License](LICENSE)
