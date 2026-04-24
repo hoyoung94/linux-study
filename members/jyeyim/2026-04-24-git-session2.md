@@ -34,6 +34,9 @@ branch 'study/hoyoung94-session2' set up to track 'origin/study/hoyoung94-sessio
 
 ## 헷갈렸던 점
 - `git pull`을 안 하고 브랜치를 따면 어떻게 되는지 궁금하다.
+ - 브랜치를 삭제를 로컬이랑 서버랑 둘다해야해요 나 할수있어요!
 
 ## 다음 학습 예정
 - 다음 세션에서 충돌 해결과 merge 흐름을 익힐 예정이다.
+
+수정합니다악
