@@ -25,7 +25,7 @@
 
 ```
 linux-study/
-├── week0/        # Git 기초, GitHub 업로드, 브랜치/PR 입문
+├── week0/        # Git 기초, GitHub 업로드, 브랜치/PR, conflict, 복구, 전략, 기본기 보강
 ├── week1/        # 1주차: 기본 명령어 & 파일 시스템
 ├── week2/        # 2주차: 권한 & 프로세스 관리
 ├── week3/        # 3주차: 네트워크 & Shell 스크립트
@@ -37,6 +37,8 @@ linux-study/
 
 > `week0`는 스터디 시작 전 공통 준비 주차입니다.
 > Git 기초와 GitHub 제출 흐름을 익힌 뒤 `week1`부터 리눅스 학습을 진행합니다.
+
+Git/GitHub 준비 세션은 [week0/README.md](week0/README.md)에서 Session 1-7 순서로 진행합니다.
 
 ## ✍️ 커밋 메시지 규칙
 
