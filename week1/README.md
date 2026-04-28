@@ -6,9 +6,9 @@
 
 ## 개인 학습 기록 제출 규칙
 
-각 학습자는 1주차 Session 1을 공부한 뒤 개인 학습 기록을 `week1` 폴더 바로 아래에 Markdown 파일로 제출합니다.
+각 학습자는 1주차 Session 1을 공부한 뒤 개인 학습 기록을 `week1/study-records` 폴더 아래에 Markdown 파일로 제출합니다.
 
-- 제출 위치: `week1`
+- 제출 위치: `week1/study-records`
 - 한 세션당 한 파일을 만듭니다.
 - 파일명에는 공백, 한글, 특수문자를 사용하지 않습니다.
 - 같은 세션 내용을 다시 정리할 때는 기존 파일을 수정합니다.
@@ -17,10 +17,10 @@
 
 | 학습자 | 파일명 |
 |---|---|
-| hoyoung94 | `hoyoung94-session1.md` |
-| yujiin12700 | `yujiin12700-session1.md` |
-| jyeyim | `jyeyim-session1.md` |
-| Halee0090 | `Halee0090-session1.md` |
+| hoyoung94 | `study-records/hoyoung94-session1.md` |
+| yujiin12700 | `study-records/yujiin12700-session1.md` |
+| jyeyim | `study-records/jyeyim-session1.md` |
+| Halee0090 | `study-records/Halee0090-session1.md` |
 
 ## 개인 기록 문서 템플릿
 
@@ -65,7 +65,7 @@ docs: [week1] 개인 학습 기록 추가
 
 ## 완료 확인
 
-- 개인 학습 기록 파일이 `week1` 바로 아래에 있다.
+- 개인 학습 기록 파일이 `week1/study-records` 아래에 있다.
 - 파일명이 위 표의 지정된 파일명과 일치한다.
 - 개인 기록에는 배운 내용, 실습 명령어, 헷갈린 점이 포함되어 있다.
 - `git status`로 제출 파일만 변경됐는지 확인했다.
